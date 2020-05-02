@@ -345,6 +345,21 @@
 </div>
 {% endmacro %}
 
+{% macro year_switcher(switcher_name) %}
+<div class="year-switcher">
+  <label for="year-switcher-{{switcher_name}}" class="visually-hidden">{{ self.year_switcher() }}</label>
+  <select id="year-switcher-{{switcher_name}}">
+      {% for y in supported_years %}
+        <option
+          {% if y == year %}selected="selected"{% endif %}
+          value="{{ url_for('table_of_contents', **get_view_args(year=y)) }}">
+          {{ edition(y) }}
+        </option>
+      {% endfor %}
+  </select>
+</div>
+{% endmacro %}
+
 {# Check if year_switcher already defined in child template as macros can't be overridden #}
 {% if not year_switcher %}
   {% macro year_switcher(switcher_name) %}
