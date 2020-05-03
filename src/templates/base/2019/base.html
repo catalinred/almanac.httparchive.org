@@ -258,6 +258,33 @@
           </li>
         </ul>
       </div>
+      <hr>
+      <p class="copyright">
+        <span>{{ self.copyright() }}</span>
+        <br>
+        <a href="{{ url_for('accessibility_statement', lang=lang) }}">{{ self.accessibility_statement() }}</a>
+      </p>
+      <a class="navigation-logo ha-logo not-mobile" href="https://httparchive.org/">
+        <svg width="70" height="35" aria-label="{{ self.http_archive_link() }}">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ha"></use>
+        </svg>        
+      </a>
+      <ul class="social-media not-mobile">
+        <li>
+          <a href="https://twitter.com/HTTPArchive" aria-label="Twitter">
+            <svg width="20" height="20">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/HTTPArchive/almanac.httparchive.org" aria-label="GitHub">
+            <svg width="20" height="20">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </footer>
   {% endblock %}
   {% block scripts %}
