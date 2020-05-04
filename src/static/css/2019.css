@@ -680,6 +680,11 @@ header .cta {
   display: none;
 }
 
+.language-switcher select::-ms-expand,
+.year-switcher select::-ms-expand {
+  display: none;
+}
+
 .language-switcher option,
 .year-switcher option {
   color: #1a2b49;
