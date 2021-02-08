@@ -23,7 +23,7 @@
     "start:win32": "call tools/scripts/run_and_test_website.bat"
   },
   "devDependencies": {
-    "ejs": "3.1.5",
+    "ejs": "3.1.6",
     "fs-extra": "9.0.1",
     "jsdom": "16.4.0",
     "prettier": "2.1.2",
